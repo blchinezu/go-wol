@@ -216,7 +216,7 @@ func main() {
 	var args []string
 
 	// Detect the current user to figure out what their ~ is.
-	usr, err := user.Current()
+	_, err := user.Current()
 	fatalOnError(err)
 
 	// Load the list of aliases from the file at dbPath.

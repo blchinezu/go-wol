@@ -8,7 +8,6 @@ import (
 	"net"
 	"os"
 	"os/user"
-	"path"
 	"strings"
 
 	flags "github.com/jessevdk/go-flags"
@@ -19,7 +18,7 @@ import (
 ////////////////////////////////////////////////////////////////////////////////
 
 const (
-	dbPath = "/.config/go-wol/bolt.db"
+	dbPath = "/tmp/go-wol.db"
 )
 
 var (
@@ -221,7 +220,7 @@ func main() {
 	fatalOnError(err)
 
 	// Load the list of aliases from the file at dbPath.
-	aliases, err := LoadAliases("/tmp/go-wol.db")
+	aliases, err := LoadAliases(dbPath)
 	fatalOnError(err)
 	defer aliases.Close()
 

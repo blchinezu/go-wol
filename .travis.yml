@@ -28,5 +28,5 @@ deploy:
     - bin/wol_windows_amd64.exe
   skip_cleanup: true
   on:
-    repo: sabhiram/go-wol
+    repo: blchinezu/go-wol
     tags: true

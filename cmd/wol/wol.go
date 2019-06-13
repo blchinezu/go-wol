@@ -13,7 +13,7 @@ import (
 
 	flags "github.com/jessevdk/go-flags"
 
-	wol "github.com/sabhiram/go-wol"
+	wol "github.com/blchinezu/go-wol"
 )
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -221,7 +221,7 @@ func main() {
 	fatalOnError(err)
 
 	// Load the list of aliases from the file at dbPath.
-	aliases, err := LoadAliases(path.Join(usr.HomeDir, dbPath))
+	aliases, err := LoadAliases("/tmp/go-wol.db")
 	fatalOnError(err)
 	defer aliases.Close()
 

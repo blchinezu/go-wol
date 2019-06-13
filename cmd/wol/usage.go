@@ -7,7 +7,7 @@ import (
 
 	"github.com/sabhiram/go-colorize"
 
-	wol "github.com/sabhiram/go-wol"
+	wol "github.com/blchinezu/go-wol"
 )
 
 ////////////////////////////////////////////////////////////////////////////////
